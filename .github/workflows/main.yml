@@ -21,6 +21,9 @@ jobs:
     - name: stop old container
       run: sudo docker container stop express-container || true
 
+    - name: Delete old container
+      run: sudo docker container rm express-container|| true
+
     # - name: Build with Maven
     #   run: mvn -B package --file pom.xml
 
